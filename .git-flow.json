@@ -1,0 +1,69 @@
+[
+  {
+    "type": "feature",
+    "name": "feat/{new_branch}",
+    "from": "dev",
+    "to": [
+      {
+        "branch": "dev",
+        "strategy": "merge"
+      }
+    ]
+  },
+  {
+    "type": "enhancement",
+    "name": "enhance/{new_branch}",
+    "from": "dev",
+    "to": [
+      {
+        "branch": "dev",
+        "strategy": "merge"
+      }
+    ]
+  },
+  {
+    "type": "hotfix",
+    "name": "hotfix/{new_branch}",
+    "from": "main",
+    "to": [
+      {
+        "branch": "main",
+        "strategy": "merge"
+      },
+      {
+        "branch": "dev",
+        "strategy": "merge"
+      },
+      {
+        "branch": "feat/*",
+        "strategy": "merge"
+      }
+    ]
+  },
+  {
+    "type": "bugfix",
+    "name": "bugfix/{new_branch}",
+    "from": "dev",
+    "to": [
+      {
+        "branch": "dev",
+        "strategy": "merge"
+      },
+      {
+        "branch": "feat/*",
+        "strategy": "merge"
+      }
+    ]
+  },
+  {
+    "type": "release",
+    "name": "release/{new_branch}",
+    "from": "dev",
+    "to": [
+      {
+        "branch": "main",
+        "strategy": "merge"
+      }
+    ]
+  }
+]
