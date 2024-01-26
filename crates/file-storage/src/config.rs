@@ -4,9 +4,23 @@ use anyhow::{Context, Ok, Result};
 use serde::Deserialize;
 
 #[derive(Debug, Deserialize)]
+pub struct Minio {
+    pub ip: String,
+    pub port: u16,
+    pub access_key: String,
+    pub secret_key: String,
+    pub bucket: String,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct Service {
+    pub listen: u16,
+}
+
+#[derive(Debug, Deserialize)]
 pub struct Config {
-    minio_address: String,
-    listen_port: String,
+    pub minio: Minio,
+    pub service: Service,
 }
 
 pub fn read_config(config_path: Option<&PathBuf>) -> Result<Config> {

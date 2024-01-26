@@ -1,2 +1,9 @@
-minio_address = "127.0.0.1:10024"
-listen_port = "8080"
+[minio]
+ip = "http://127.0.0.1"
+port = 9000
+access_key = "minioadmin"
+secret_key = "minioadmin"
+bucket = "default"
+
+[service]
+listen = 8000
