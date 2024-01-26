@@ -12,7 +12,9 @@ tokio = { version = "1.35", features = ["full"] }
 redis = { version = "0.24", features = ["tokio-comp"] }
 sea-orm = { version = "0.12", features = ["sqlx-postgres", "tokio", "macros"] }
 tarpc = { version = "0.34", features = ["tokio1"] }
-clap = { version = "4.4", features = ["derive"] }
+clap = { version = "4.4", features = ["cargo"] }
 anyhow = "1.0"
 log = "0.4"
 futures = "0.3"
+toml = "0.8"
+serde = "1.0"

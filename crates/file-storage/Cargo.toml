@@ -4,4 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+clap = { workspace = true }
 minio = "0.1"
+toml = { workspace = true }
+anyhow = { workspace = true }
+serde = { workspace = true }
