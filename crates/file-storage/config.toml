@@ -5,5 +5,5 @@ access_key = "minioadmin"
 secret_key = "minioadmin"
 bucket = "default"
 
-[service]
-listen = 8000
+[server]
+port = 8000

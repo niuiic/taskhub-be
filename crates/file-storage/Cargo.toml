@@ -9,4 +9,5 @@ toml = { workspace = true }
 anyhow = { workspace = true }
 serde = { workspace = true }
 tokio = { workspace = true }
+axum = { workspace = true }
 rust-s3 = "0.33"

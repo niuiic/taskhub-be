@@ -13,14 +13,14 @@ pub struct Minio {
 }
 
 #[derive(Debug, Deserialize)]
-pub struct Service {
-    pub listen: u16,
+pub struct Server {
+    pub port: u16,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct Config {
     pub minio: Minio,
-    pub service: Service,
+    pub server: Server,
 }
 
 pub fn read_config(config_path: Option<&PathBuf>) -> Result<Config> {

@@ -1,5 +1,6 @@
 use std::path::PathBuf;
 
+use axum::{routing::get, Router};
 use bucket::get_bucket;
 use clap::{arg, command, value_parser};
 
@@ -33,4 +34,15 @@ async fn main() {
             return;
         }
     };
+
+    let app = Router::new().route("/", get(|| async { "Hello" }));
+    let listener =
+        match tokio::net::TcpListener::bind(format!("0.0.0.0:{}", config.server.port)).await {
+            Ok(listener_v) => listener_v,
+            Err(err) => {
+                eprintln!("unable to start server: {:?}", err);
+                return;
+            }
+        };
+    axum::serve(listener, app).await.unwrap();
 }
