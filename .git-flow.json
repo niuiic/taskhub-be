@@ -11,17 +11,6 @@
     ]
   },
   {
-    "type": "enhancement",
-    "name": "enhance/{new_branch}",
-    "from": "dev",
-    "to": [
-      {
-        "branch": "dev",
-        "strategy": "merge"
-      }
-    ]
-  },
-  {
     "type": "hotfix",
     "name": "hotfix/{new_branch}",
     "from": "main",
