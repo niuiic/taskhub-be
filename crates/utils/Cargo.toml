@@ -2,3 +2,10 @@
 name = "utils"
 version = "0.1.0"
 edition = "2021"
+
+[lib]
+name = "utils"
+path = "src/lib.rs"
+
+[dependencies]
+serde = { workspace = true }
