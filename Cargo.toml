@@ -4,6 +4,7 @@ members = [
   "crates/gateway",
   "crates/user-manage",
   "crates/task-manage",
+  "crates/utils",
 ]
 resolver = "2"
 
@@ -14,7 +15,7 @@ sea-orm = { version = "0.12", features = ["sqlx-postgres", "tokio", "macros"] }
 tarpc = { version = "0.34", features = ["tokio1"] }
 clap = { version = "4.4", features = ["cargo"] }
 anyhow = "1.0"
-log = "0.4"
+tracing = "0.1"
 futures = "0.3"
 toml = "0.8"
 serde = "1.0"
